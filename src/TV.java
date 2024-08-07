@@ -11,18 +11,34 @@ public class TV {
         ligada = false;
     }
 
+
     public void aumentarVolume(){
-        volume++;
+        if(ligada){
+            volume++;
         System.out.println("Volume aumentado para: " + volume);
+        }else{
+            System.out.println("A tv está desligada");
+        }
+        
     }
 
     public void diminuirVolume(){
-        volume--;
-        System.out.println("Volume diminuido para: " + volume);
+        if (ligada) {
+            volume--;
+            System.out.println("Volume diminuido para: " + volume);
+        }else{
+            System.out.println("A tv está desligada");
+        }
+        
     }
 
     public void mudarCanal(Integer canal){
-        this.canal = canal;
-        System.out.println("Canal mudado para: " + this.canal);
+        if (ligada) {
+            this.canal = canal;
+            System.out.println("Canal mudado para: " + this.canal);  
+        }else{
+            System.out.println("A tv está desligada");
+        }
+        
     }
 }

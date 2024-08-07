@@ -12,5 +12,11 @@ public class Usuario {
         System.out.println("VOLUME:".concat(" ") + smartTv.volume);
 
         smartTv.ligar();
+
+        smartTv.diminuirVolume();
+        smartTv.mudarCanal(30);
+        System.out.println("TV LIGADA?".concat(" ").concat(smartTv.ligada.toString()));
+        System.out.println("CANAL:".concat(" ") + smartTv.canal);
+        System.out.println("VOLUME:".concat(" ") + smartTv.volume);
     }
 }
